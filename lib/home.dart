@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app_batch21/widgets/travel_blog.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             flex: 2,
-            child: Placeholder(),
+            child: TravelBlog(),
           ),
           Container(
             child: Row(
