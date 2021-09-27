@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app_batch21/widgets/travel_blog.dart';
+import 'package:travel_app_batch21/widgets/travel_header.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,10 +14,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         actions: [
           Container(
-            padding: EdgeInsets.all(5.0),
-            child: Icon(Icons.menu),
+            padding: EdgeInsets.all(20),
+            child: Icon(
+              Icons.menu,
+              color: Colors.black,
+            ),
           ),
         ],
       ),
@@ -25,6 +29,7 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
+            padding: EdgeInsets.all(10),
             child: Text(
               "Travel Blog",
               style: TextStyle(
@@ -35,7 +40,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             flex: 2,
-            child: TravelBlog(),
+            child: TravelHeader(),
           ),
           Container(
             child: Row(
