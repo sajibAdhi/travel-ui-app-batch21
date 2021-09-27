@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app_batch21/widgets/travel_header.dart';
+import '/widgets/travel_header.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -49,13 +49,15 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   "Most Popular",
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: 27,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
                   "View all",
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: 20,
+                    color: Colors.red,
                   ),
                 ),
               ],

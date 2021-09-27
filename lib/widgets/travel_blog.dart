@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app_batch21/models/travel.dart';
+import '/models/travel.dart';
 
 class TravelBlog extends StatelessWidget {
   final _list = Travel.getTravelBlog();
