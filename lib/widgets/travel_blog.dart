@@ -11,7 +11,7 @@ class TravelBlog extends StatelessWidget {
       itemCount: _list.length,
       itemBuilder: (context, index) {
         var travel = _list[index];
-        return Stack(
+        return Row(
           children: [
             Container(
               padding: EdgeInsets.all(10),
@@ -20,8 +20,8 @@ class TravelBlog extends StatelessWidget {
                 child: Image.asset(
                   travel.url,
                   fit: BoxFit.cover,
-                  width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
                 ),
               ),
             ),

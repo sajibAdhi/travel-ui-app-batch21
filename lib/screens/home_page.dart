@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '/widgets/travel_blog.dart';
 import '/widgets/travel_header.dart';
 
 class HomePage extends StatefulWidget {
@@ -43,6 +44,7 @@ class _HomePageState extends State<HomePage> {
             child: TravelHeader(),
           ),
           Container(
+            padding: EdgeInsets.all(10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -64,7 +66,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Expanded(
-            child: Placeholder(),
+            child: TravelBlog(),
           ),
         ],
       ),
