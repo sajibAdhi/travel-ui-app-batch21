@@ -6,25 +6,27 @@ class TravelBlog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageView.builder(
-      physics: BouncingScrollPhysics(),
+    return ListView.separated(
+      separatorBuilder: (_,index) => SizedBox(width: 10,) ,
+      scrollDirection: Axis.horizontal,
       itemCount: _list.length,
       itemBuilder: (context, index) {
         var travel = _list[index];
-        return Row(
+        return Stack(
           children: [
-            Container(
-              padding: EdgeInsets.all(10),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(5),
-                child: Image.asset(
-                  travel.url,
-                  fit: BoxFit.cover,
-                  height: MediaQuery.of(context).size.height,
-                  width: MediaQuery.of(context).size.width,
-                ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: Image.asset(
+                travel.url,
+                fit: BoxFit.cover,
+                width: 150,
               ),
             ),
+            Positioned(child: Column(
+              children: [
+                Text(travel.name),
+              ],
+            ),),
           ],
         );
       },
