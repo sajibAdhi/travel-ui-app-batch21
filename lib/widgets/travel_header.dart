@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '/models/travel.dart';
+import 'text_shadow_widget.dart';
 
 class TravelHeader extends StatelessWidget {
   final _list = Travel.getTravelHeader();
@@ -36,43 +37,18 @@ class TravelHeader extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    travel.name,
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      shadows: [
-                        Shadow(
-                          color: Colors.black,
-                          blurRadius: 10,
-                          offset: Offset.fromDirection(10),
-                        ),
-                        Shadow(
-                          color: Colors.black,
-                          blurRadius: 10,
-                          offset: Offset.fromDirection(-10),
-                        ),
-                      ],
-                    ),
+                  TextShadowWidget(
+                    color: Colors.black,
+                    text: travel.name,
+                    fontSize: 20,
+                    shadowColor: Colors.white,
                   ),
-                  Text(
-                    travel.location,
-                    style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.white,
-                      shadows: [
-                        Shadow(
-                          color: Colors.black,
-                          blurRadius: 10,
-                          offset: Offset.fromDirection(10),
-                        ),
-                        Shadow(
-                          color: Colors.black,
-                          blurRadius: 10,
-                          offset: Offset.fromDirection(-10),
-                        ),
-                      ],
-                    ),
+                  TextShadowWidget(
+                    color: Colors.black,
+                    text: travel.location,
+                    fontSize: 30,
+                    shadowColor: Colors.white,
+                    fontWeight: FontWeight.bold,
                   ),
                 ],
               ),
