@@ -20,11 +20,19 @@ class _HomePageState extends State<HomePage> {
           children: [
             Container(
               alignment: Alignment.centerRight,
-              padding: EdgeInsets.all(10),
-              child: Icon(
-                Icons.menu,
-                color: Colors.black,
-                size: 50,
+              padding: EdgeInsets.only(
+                top: 5,
+                right: 10
+              ),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(
+                  Icons.menu,
+                  color: Colors.black,
+                  size: 30,
+                ),
               ),
             ),
             Container(
