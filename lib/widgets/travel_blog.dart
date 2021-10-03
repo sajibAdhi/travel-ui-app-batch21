@@ -11,7 +11,7 @@ class TravelBlog extends StatelessWidget {
     return ListView.separated(
       controller: _pgCtrl,
       separatorBuilder: (_, index) => SizedBox(
-        width: 10,
+        width: 5,
       ),
       scrollDirection: Axis.horizontal,
       itemCount: _list.length,
@@ -26,7 +26,7 @@ class TravelBlog extends StatelessWidget {
                 child: Image.asset(
                   travel.url,
                   fit: BoxFit.cover,
-                  width: _size.width / 2,
+                  width: _size.width / 2.1,
                   height: _size.height,
                 ),
               ),
