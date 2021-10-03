@@ -8,6 +8,7 @@ class TravelHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _size = MediaQuery.of(context).size;
     return PageView.builder(
       controller: _pgCtrl,
       physics: BouncingScrollPhysics(),
@@ -26,13 +27,13 @@ class TravelHeader extends StatelessWidget {
                 child: Image.asset(
                   travel.url,
                   fit: BoxFit.cover,
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
+                  width: _size.width,
+                  height: _size.height,
                 ),
               ),
             ),
             Positioned(
-              bottom: 45,
+              bottom: 75,
               left: 20,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

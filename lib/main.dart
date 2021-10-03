@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app_batch21/screens/loading_page.dart';
 import 'screens/home_page.dart';
 
 void main() {
@@ -11,9 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: LoadingScreen(),
     );
   }
 }
