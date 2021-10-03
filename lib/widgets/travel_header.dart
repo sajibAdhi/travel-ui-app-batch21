@@ -17,7 +17,8 @@ class TravelHeader extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                right: 20,
+                right: 10,
+                bottom: 30,
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(5),
@@ -76,18 +77,20 @@ class TravelHeader extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              width: 50,
-              height: 50,
-
-              decoration: BoxDecoration(
-                // borderRadius: BorderRadius.circular(50),
-                
-              ),
-              child: Icon(
-                Icons.arrow_forward,
-                color: Colors.white,
-
+            Positioned(
+              bottom: 10,
+              right: 60,
+              child: Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                child: Icon(
+                  Icons.arrow_forward,
+                  color: Colors.white,
+                ),
               ),
             ),
           ],
